@@ -1,0 +1,11 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: caev-ausschluss-service
+spec:
+  selector:
+    run: ausschluss
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: ausschluss
