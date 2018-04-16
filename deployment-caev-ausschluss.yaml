@@ -10,8 +10,8 @@ metadata:
   creationTimestamp: 2018-04-12T21:01:27Z
   generation: 1
   labels:
-    run: ausschluss-service
-  name: ausschluss-service
+    run: ausschluss-deployment
+  name: ausschluss
   namespace: default
 spec:
   progressDeadlineSeconds: 600
@@ -19,7 +19,7 @@ spec:
   revisionHistoryLimit: 10
   selector:
     matchLabels:
-      run: ausschluss
+      run: ausschluss-pod
   strategy:
     rollingUpdate:
       maxSurge: 1
@@ -29,7 +29,7 @@ spec:
     metadata:
       creationTimestamp: null
       labels:
-        run: ausschluss
+        run: ausschluss-pod
     spec:
       containers:
       - image: ausschluss-service

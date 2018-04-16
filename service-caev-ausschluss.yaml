@@ -1,10 +1,10 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: caev-ausschluss-service
+  name: ausschluss-service
 spec:
   selector:
-    run: ausschluss
+    run: ausschluss-pod
   ports:
   - protocol: TCP
     port: 80
