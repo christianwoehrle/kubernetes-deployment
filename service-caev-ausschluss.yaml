@@ -7,5 +7,5 @@ spec:
     run: ausschluss-pod
   ports:
   - protocol: TCP
-    port: 80
+    port: 10001
     targetPort: ausschluss

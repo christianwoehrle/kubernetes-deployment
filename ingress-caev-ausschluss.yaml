@@ -1,0 +1,21 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: caev-ingress
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
+spec:
+  backend:
+    serviceName: lumpensammler
+    servicePort: 8080
+  rules:
+  - http:
+      paths:
+      - path: /ausschluss
+        backend:
+          serviceName: ausschluss-service
+          servicePort: 10001
+      - path: /kundeninfo
+        backend:
+          serviceName: kundeninfo
+          servicePort: 10001
