@@ -8,6 +8,8 @@ spec:
   backend:
     serviceName: lumpensammler
     servicePort: 8080
+  tls:
+    - secretName: test.dwpbank.crednet.de
   rules:
   - http:
       paths:
